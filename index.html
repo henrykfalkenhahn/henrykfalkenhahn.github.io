@@ -20,7 +20,7 @@
         display: none;
     }
 </style>
-<h1>Scan frm WebCam:</h1>
+<h1>Scan frssm WebCam:</h1>
 <div>
     <b>Device has camera: </b>
     <span id="cam-has-camera"></span>
@@ -130,8 +130,8 @@
             return;
         }
         QrScanner.scanImage(file)
-            // .then(result => setResult(fileQrResult, result))
-            // .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+            .then(result => setResult(fileQrResult, result))
+            .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
     });
 
 </script>
