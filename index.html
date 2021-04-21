@@ -77,13 +77,13 @@
 
     function setResult(label, result) {
         test = result;
-        if (test.toLowerCase().indexOf("error") === -1 && test.toLowerCase().indexOf("no") === -1) {
+        // if (test.toLowerCase().indexOf("error") === -1 && test.toLowerCase().indexOf("no") === -1) {
         label.textContent = result;
         camQrResultTimestamp.textContent = new Date().toString();
         label.style.color = 'teal';
         clearTimeout(label.highlightTimeout);
         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-        }
+        // }
     }
 
     // ####### Web Cam Scanning #######
