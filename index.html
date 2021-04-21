@@ -76,11 +76,13 @@
     const fileQrResult = document.getElementById('file-qr-result');
 
     function setResult(label, result) {
+        if (result.toLowerCase().indexOf("error") === -1) {
         label.textContent = result;
         camQrResultTimestamp.textContent = new Date().toString();
         label.style.color = 'teal';
         clearTimeout(label.highlightTimeout);
         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+        }
     }
 
     // ####### Web Cam Scanning #######
