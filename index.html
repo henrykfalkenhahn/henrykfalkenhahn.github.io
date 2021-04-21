@@ -76,7 +76,8 @@
     const fileQrResult = document.getElementById('file-qr-result');
 
     function setResult(label, result) {
-        if (result.toLowerCase().indexOf("error") === -1 && result.toLowerCase().indexOf("no") === -1) {
+        test = result;
+        if (test.toLowerCase().indexOf("error") === -1 && test.toLowerCase().indexOf("no") === -1) {
         label.textContent = result;
         camQrResultTimestamp.textContent = new Date().toString();
         label.style.color = 'teal';
