@@ -20,7 +20,7 @@
         display: none;
     }
 </style>
-<h1>Scan frrr WebCam:</h1>
+<h1>Scan from WebCam:</h1>
 <div>
     <b>Device has camera: </b>
     <span id="cam-has-camera"></span>
@@ -74,18 +74,19 @@
     const camQrResultTimestamp = document.getElementById('cam-qr-result-timestamp');
     const fileSelector = document.getElementById('file-selector');
     const fileQrResult = document.getElementById('file-qr-result');
+
     function setResult(label, result) {
-        if (result.toLowerCase().indexOf("error") === -1) {
         label.textContent = result;
         camQrResultTimestamp.textContent = new Date().toString();
         label.style.color = 'teal';
         clearTimeout(label.highlightTimeout);
         label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
-        }
     }
 
     // ####### Web Cam Scanning #######
+
     QrScanner.hasCamera().then(hasCamera => camHasCamera.textContent = hasCamera);
+
     const scanner = new QrScanner(video, result => setResult(camQrResult, result), error => {
         camQrResult.textContent = error;
         camQrResult.style.color = 'inherit';
