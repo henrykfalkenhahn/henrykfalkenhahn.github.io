@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
 
   <script
     type="text/javascript"
@@ -90,13 +90,14 @@ h1 {
       <h1>QR Code Scanner</h1>
 
       <a id="btn-scan-qr">
-        <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-        </a>
-
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=Hello.World&amp;size=100x100" alt="" title="HELLO" />
+        </a>     
+      
       <canvas hidden="" id="qr-canvas"></canvas>
 
       <div id="qr-result" hidden="">
         <b>Data:</b> <span id="outputData"></span>
+        <button onclick="openInNewTab(Url)">Open Link</button>
       </div>
     </div>
   </body>
@@ -105,7 +106,9 @@ h1 {
 
     <script type="text/javascript">//<![CDATA[
 
-
+function openInNewTab(url) {
+ window.open(url, '_blank').focus();
+}
 
 
 const video = document.createElement("video");
