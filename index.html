@@ -81,11 +81,7 @@ h1 {
 	text-decoration:none;
 }
 .btn:hover {
-	background-color:#ffffff;
-}
-.btn:active {
-	position:relative;
-	top:1px;
+	border:3px solid #ffffff;
 }
 .footer {
    position: fixed;
@@ -98,6 +94,15 @@ h1 {
 a {
   color: white;
 }   
+
+.btn2 {
+	cursor:pointer;
+	color:black;
+	font-family:Courier New;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
+}
 
         
 
@@ -132,8 +137,8 @@ a {
       <canvas hidden="" id="qr-canvas"></canvas>
 
       <div id="qr-result" hidden="">
-        <b>Data:</b> <span id="outputData"></span>
-        <button onclick="openInNewTab()">Open Link</button>
+        <b class="btn2">Data:</b> <span class="btn2"id="outputData"></span>
+        <button class="btn" onclick="openInNewTab()">Open Link</button>
       </div>
     </div>
     <div class="footer">
